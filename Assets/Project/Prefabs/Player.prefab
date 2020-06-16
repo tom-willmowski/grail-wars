@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8709382780760542725}
   - component: {fileID: 8709382780760542724}
-  - component: {fileID: 8709382780760542778}
+  - component: {fileID: 2597246219665844877}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,15 +25,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8709382780760542777}
-  m_LocalRotation: {x: 3.2307532e-18, y: 0.92520046, z: 0.000000110292476, w: 0.37947875}
-  m_LocalPosition: {x: 9.91, y: 12, z: 13.89}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4873104822145300490}
   - {fileID: 8709382781875736028}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 135.397, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &8709382780760542724
 CharacterController:
   m_ObjectHideFlags: 0
@@ -52,7 +52,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.8, z: 0}
---- !u!114 &8709382780760542778
+--- !u!114 &2597246219665844877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,9 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ce72b0cd813c24dbf3e0953ce7d13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 2
-  LookSensitivity: 80
-  JumpStrength: 4
+  MovementSpeed: 4
+  LookSensitivity: 100
+  JumpStrength: 5
+  animator: {fileID: 3254621239236498800}
+  controller: {fileID: 8709382780760542724}
 --- !u!1 &8709382781875736019
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +94,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8709382781875736019}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.36, z: 0}
+  m_LocalPosition: {x: 0, y: 1.6, z: 0.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8709382780760542725}
@@ -218,6 +220,12 @@ PrefabInstance:
 --- !u!4 &4873104822145300490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286668710296377909, guid: fc304f0df643d724da851b985a86a795,
+    type: 3}
+  m_PrefabInstance: {fileID: 8709382780687606335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3254621239236498800 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6194505279584597839, guid: fc304f0df643d724da851b985a86a795,
     type: 3}
   m_PrefabInstance: {fileID: 8709382780687606335}
   m_PrefabAsset: {fileID: 0}
