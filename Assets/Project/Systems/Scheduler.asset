@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3781bd0383fa1cb47a1a1f3478b57423, type: 3}
-  m_Name: StateMachine
+  m_Script: {fileID: 11500000, guid: b46e0f939e4d96e4ea9f7bd8cedddd17, type: 3}
+  m_Name: Scheduler
   m_EditorClassIdentifier: 
-  stateList:
-  - {fileID: 11400000, guid: 8d7a4ec7547f2e14db1fae541278b3d8, type: 2}
-  - {fileID: 11400000, guid: 303bbb484d44ac742bdcf1d6bbae26c8, type: 2}

@@ -23,7 +23,7 @@ public class @GameplayInputActions : IInputActionCollection, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""c3fd1958-e601-4414-ae04-8eaa290985e0"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": ""NormalizeVector2"",
+                    ""processors"": """",
                     ""interactions"": """"
                 },
                 {
@@ -65,7 +65,7 @@ public class @GameplayInputActions : IInputActionCollection, IDisposable
                     ""id"": ""cffd85d6-ef82-484b-a199-3568aedde89c"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone(min=0.125,max=0.925)"",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
@@ -131,7 +131,7 @@ public class @GameplayInputActions : IInputActionCollection, IDisposable
                     ""id"": ""e3b9f3d5-b444-4cdb-a24b-0e0e265330c3"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone(min=0.125,max=0.925)"",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
