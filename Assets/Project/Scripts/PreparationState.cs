@@ -7,6 +7,11 @@ namespace Bice.GrailWars.States
     [CreateAssetMenu(menuName = "Bice/State/Preparation")]
     public class PreparationState : GameState
     {
+        [SerializeField]
+        private GrailElement grailPrefab;
+        [SerializeField]
+        private Vector3 defaultGrailPosition;
+
         private FaderElement fader;
         private Camera topDownCamera;
         private GrailMapGenerator generator;
@@ -18,6 +23,7 @@ namespace Bice.GrailWars.States
             topDownCamera.enabled = true;
             generator = GameObject.FindObjectOfType<GrailMapGenerator>();
             generator.Build();
+            Instantiate(grailPrefab, defaultGrailPosition, Quaternion.identity);
             fader.Out(() => { StateMachine.Change<SeekState>(); });
         }
 

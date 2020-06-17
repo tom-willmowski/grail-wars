@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b883af80afeb6428bae29c4963ad28, type: 3}
   m_Name: Preparation
   m_EditorClassIdentifier: 
+  grailPrefab: {fileID: 1691273241414335300, guid: 9c2868bde4a058b4985bd8873115ecdb,
+    type: 3}
+  defaultGrailPosition: {x: 6, y: 10, z: 3}
