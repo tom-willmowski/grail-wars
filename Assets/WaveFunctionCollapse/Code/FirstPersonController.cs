@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Users;
 
 [RequireComponent(typeof(CharacterController))]
 public class FirstPersonController : MonoBehaviour {
@@ -18,9 +17,9 @@ public class FirstPersonController : MonoBehaviour {
     private Animator animator;
 
     [SerializeField]
-    private GameplayInputActions inputActions;
-    [SerializeField]
     private CharacterController controller;
+    [SerializeField]
+    private PlayerInput input;
 
     private Vector2 movementInput;
     private Vector2 lookPosition;
@@ -34,12 +33,11 @@ public class FirstPersonController : MonoBehaviour {
 
     private void Awake()
     {
-        inputActions = new GameplayInputActions();
-        inputActions.Gameplay.Move.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
-        inputActions.Gameplay.Move.canceled += ctx => movementInput = Vector2.zero;
+        input.actions["Move"].performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+        input.actions["Move"].canceled += ctx => movementInput = Vector2.zero;
 
-        inputActions.Gameplay.Look.performed += ctx => lookPosition = ctx.ReadValue<Vector2>();
-        inputActions.Gameplay.Look.canceled += ctx => lookPosition = Vector2.zero;
+        input.actions["Look"].performed += ctx => lookPosition = ctx.ReadValue<Vector2>();
+        input.actions["Look"].canceled += ctx => lookPosition = Vector2.zero;
     }
 
     void Start () {
@@ -49,7 +47,7 @@ public class FirstPersonController : MonoBehaviour {
 	}
 	
 	private void Update () {
-		float runMultiplier = inputActions.Gameplay.Run.triggered ? 2f : 1f;
+		float runMultiplier = input.actions["Run"].triggered ? 2f : 1f;
 		Vector3 movementVector = this.transform.forward * movementInput.y + this.transform.right * movementInput.x;
 		if (movementVector.sqrMagnitude > 1) { // this check prevents partial joystick input from becoming 100% speed
 			movementVector.Normalize();  // this prevents diagonal movement form being too fast
@@ -63,14 +61,4 @@ public class FirstPersonController : MonoBehaviour {
 
         animator.SetFloat("Speed", movementVector.sqrMagnitude);
 	}
-
-    private void OnEnable()
-    {
-        inputActions.Enable();
-    }
-
-    private void OnDisable()
-    {
-        inputActions.Disable();
-    }
 }
