@@ -15,3 +15,4 @@ MonoBehaviour:
   stateList:
   - {fileID: 11400000, guid: 8d7a4ec7547f2e14db1fae541278b3d8, type: 2}
   - {fileID: 11400000, guid: 303bbb484d44ac742bdcf1d6bbae26c8, type: 2}
+  - {fileID: 11400000, guid: d6c384a36926b47418f552d4f848e901, type: 2}

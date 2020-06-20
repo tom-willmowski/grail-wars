@@ -23,6 +23,8 @@ public class Module {
 	// This is precomputed to make entropy calculation faster
 	public float PLogP;
 
+    public bool container;
+
 	public Module(GameObject prefab, int rotation, int index) {
 		this.Rotation = rotation;
 		this.Index = index;

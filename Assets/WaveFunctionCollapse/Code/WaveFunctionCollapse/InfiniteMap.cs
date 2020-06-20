@@ -83,6 +83,12 @@ public class InfiniteMap : AbstractMap {
 		return this.slots.Values;
 	}
 
+    public Slot GetRandomSlot()
+    {
+        List<Slot> slots = this.slots.Values.ToList();
+        return slots[Random.Next(0, slots.Count)];
+    }
+
 	public Slot GetDefaultSlot(int y) {
 		return this.defaultColumn.GetSlot(Vector3Int.up * y);
 	}

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8709382780760542725}
   - component: {fileID: 8709382780760542724}
-  - component: {fileID: 2597246219665844877}
   - component: {fileID: 1068173200240019486}
   - component: {fileID: 8617286109899971602}
   m_Layer: 0
@@ -51,27 +50,9 @@ CharacterController:
   m_Radius: 0.2
   m_SlopeLimit: 55
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.8, z: 0}
---- !u!114 &2597246219665844877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8709382780760542777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20ce72b0cd813c24dbf3e0953ce7d13a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovementSpeed: 3
-  LookSensitivity: 100
-  JumpStrength: 5
-  animator: {fileID: 3254621239236498800}
-  controller: {fileID: 8709382780760542724}
-  input: {fileID: 1068173200240019486}
 --- !u!114 &1068173200240019486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e49c49e6cfa1f4d835e3bbea9ce8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MovementSpeed: 3
+  LookSensitivity: 100
+  animator: {fileID: 3254621239236498800}
+  controller: {fileID: 8709382780760542724}
+  input: {fileID: 1068173200240019486}
   fppCamera: {fileID: 8709382781875736029}
 --- !u!1 &8709382781875736019
 GameObject:
@@ -257,11 +243,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6194505279584597839, guid: fc304f0df643d724da851b985a86a795,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 1ac2a1891f6a2814dbcb83cbd24d5ee1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc304f0df643d724da851b985a86a795, type: 3}
 --- !u!4 &4873104822145300490 stripped

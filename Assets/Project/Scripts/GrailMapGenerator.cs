@@ -16,6 +16,13 @@ public class GrailMapGenerator : MonoBehaviour {
 	public bool ApplyBoundaryConstraints = true;
 
 	public ModuleData ModuleData;
+    private List<Slot> containers;
+
+    public Vector3 GetRandomPosition()
+    {
+        Vector3Int position = containers[UnityEngine.Random.Range(0, containers.Count())].Position;
+        return GetWorldspacePosition(position);
+    }
 
 	public Vector3 GetWorldspacePosition(Vector3Int position) {
 		return this.transform.position
@@ -60,6 +67,7 @@ public class GrailMapGenerator : MonoBehaviour {
         Initialize();
         Collapse();
         BuildAllSlots();
+        containers = Map.GetAllSlots().Where(s => s.Module != null && s.Module.container).ToList();
     }
 
 	public bool Initialized {
@@ -123,7 +131,7 @@ public class GrailMapGenerator : MonoBehaviour {
 	public bool VisualizeSlots = false;
 
 #if UNITY_EDITOR
-	[DrawGizmo(GizmoType.InSelectionHierarchy | GizmoType.NotInSelectionHierarchy)]
+    [DrawGizmo(GizmoType.InSelectionHierarchy | GizmoType.NotInSelectionHierarchy)]
 	static void DrawGizmo(MapBehaviour mapBehaviour, GizmoType gizmoType) {
 		if (!mapBehaviour.VisualizeSlots) {
 			return;

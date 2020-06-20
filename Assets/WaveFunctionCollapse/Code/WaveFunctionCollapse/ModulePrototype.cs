@@ -11,7 +11,7 @@ public class ModulePrototype : MonoBehaviour {
 		public bool Walkable;
 
 		public int Connector;
-
+        public bool Container;
 		[HideInInspector]
 		public Fingerprint Fingerprint;
 
