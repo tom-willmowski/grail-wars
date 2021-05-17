@@ -13,7 +13,7 @@ Hide and seek
 
 ## Tags:
 - InputSystem
-- WaveFunctionCollapse
+- WaveFunctionCollapse (https://github.com/marian42/wavefunctioncollapse)
 
 ## Possible improvements:
 * third game phase in which player who got the grail have to deliver it to a specific place, avoiding the opponent
